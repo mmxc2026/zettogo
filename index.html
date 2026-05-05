@@ -1,46 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zettogo E-commerce</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<title>Zettogo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+}
+
+/* NAV */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#2d8cff;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(135deg,#2d8cff,#0052cc);
+    color:#fff;
+    padding:80px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+    opacity:0.9;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#fff;
+    color:#2d8cff;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* CATEGORY */
+.categories{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin:40px 0;
+}
+
+.category{
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    width:120px;
+    transition:0.3s;
+}
+
+.category:hover{
+    transform:translateY(-5px);
+}
+
+.category img{
+    width:40px;
+    margin-bottom:10px;
+}
+
+/* PRODUCTS */
+.products{
+    padding:40px;
+}
+
+.products h2{
+    margin-bottom:20px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#fff;
+    border-radius:12px;
+    padding:15px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    border-radius:8px;
+}
+
+.card h3{
+    font-size:16px;
+    margin:10px 0;
+}
+
+.price{
+    color:#2d8cff;
+    font-weight:bold;
+}
+
+/* FOOTER */
+.footer{
+    background:#111;
+    color:#aaa;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+</style>
+
 </head>
+
 <body>
-    <header>
-        <img src="zettogo-logo.png" alt="Zettogo Logo">
-        <h1>SHOP MORE, GET MORE</h1>
-    </header>
-    <main>
-        <section class="categories">
-            <div class="category-card" style="background-color: #e0f0ff;">Plush Toys</div>
-            <div class="category-card" style="background-color: #b3e0ff;">Clothing</div>
-            <div class="category-card" style="background-color: #80ccff;">Electronics</div>
-            <div class="category-card" style="background-color: #4db8ff;">General Merchandise</div>
-        </section>
-        <section class="branding">
-            <h2>Our Brands</h2>
-            <div class="brand-logos">
-                <!-- Add brand logos here -->
-                <img src="brand1-logo.png" alt="Brand 1">
-                <img src="brand2-logo.png" alt="Brand 2">
-            </div>
-        </section>
-        <section class="packaging">
-            <h2>Packaging Mockups</h2>
-            <img src="packaging-mockup.png" alt="Packaging Mockup">
-        </section>
-        <section class="previews">
-            <h2>Interface Previews</h2>
-            <div class="preview">
-                <img src="mobile-preview.png" alt="Mobile Interface Preview">
-                <img src="web-preview.png" alt="Web Interface Preview">
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>Attribution: Zhihua & Dongxin</p>
-    </footer>
-    <script src="script.js"></script>
+
+<!-- NAV -->
+<div class="navbar">
+    <div class="logo">zetto<span>go</span></div>
+    <div>
+        <a href="#">Home</a> |
+        <a href="#">Shop</a> |
+        <a href="#">Contact</a>
+    </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+    <div>
+        <h1>Shop More, Get More</h1>
+        <p>Toys · Clothing · Electronics · Daily Goods</p>
+        <a href="#" class="btn">Shop Now</a>
+    </div>
+</div>
+
+<!-- CATEGORY -->
+<div class="categories">
+    <div class="category">
+        🧸
+        <p>Toys</p>
+    </div>
+    <div class="category">
+        👕
+        <p>Clothing</p>
+    </div>
+    <div class="category">
+        🎮
+        <p>Electronics</p>
+    </div>
+    <div class="category">
+        🛍️
+        <p>Daily</p>
+    </div>
+</div>
+
+<!-- PRODUCTS -->
+<div class="products">
+    <h2>Popular Products</h2>
+
+    <div class="grid">
+        <div class="card">
+            <img src="https://via.placeholder.com/200">
+            <h3>Plush Toy Bear</h3>
+            <div class="price">$19.99</div>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/200">
+            <h3>Casual T-Shirt</h3>
+            <div class="price">$25.00</div>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/200">
+            <h3>Gaming Controller</h3>
+            <div class="price">$59.99</div>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/200">
+            <h3>Smart Gadget</h3>
+            <div class="price">$89.99</div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 Zettogo. All rights reserved.
+</div>
+
 </body>
 </html>
